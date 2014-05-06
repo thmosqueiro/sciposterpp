@@ -25,6 +25,6 @@ the an old version of sciposter and this is not good at all.
 Licensing
 -----
 
-This software is under MIT licensing. Basically, you do whatever you
-please. You are not obliged to cite me, but if you do I'll appreciate
-that.
+This software is under MIT licensing. You'll find the terms in the LICENSE
+file that should be shipped together with the source. Basically, you do whatever 
+you please. You are not obliged to cite me, but if you do I'll appreciate that.
