@@ -1,0 +1,165 @@
+%%
+%% 
+%% 
+%%
+
+\ProvidesPackage{additionals}
+
+%%
+%%     A figure environment and counter
+%%
+%%  This was actually designed for a specific workshop, nobody really uses it!
+%%
+
+
+\newcommand{\figura}[4][0]
+{
+  \begin{center}
+    \vspace{1.5cm}
+      \includegraphics[scale = #3, angle = #1]{ #2 }
+      \legenda{#4}
+      \nobreak\medskip
+  \end{center}
+}
+
+\setcounter{figure}{1}
+\newcommand{\legenda}[1]{
+  \vspace{0.5cm}
+  \begin{quote}
+	\begin{center}
+    		{{\sc Figura} \arabic{figure}: #1}
+	\end{center}
+  \end{quote}
+  \vspace{1cm}
+  \stepcounter{figure}
+}
+
+
+
+
+%% Blocks
+%% Those are deprecated, I still have to put here the new ones with tikz!
+
+\newenvironment{greenblock}[5]
+{
+  \begin{minipage}{ #1 }
+    \includegraphics[width = #2 , height = #3 ]{gsq}
+  \end{minipage}
+  \begin{minipage}{ #4 }
+    \vspace{ #5 }
+}
+{
+  \end{minipage}
+}
+
+
+\newenvironment{blueblock}[5]
+{
+  \begin{minipage}{ #1 }
+    \includegraphics[width = #2 , height = #3 ]{bsq}
+  \end{minipage}
+  \begin{minipage}{ #4 }
+    \vspace{ #5 }
+}
+{
+  \end{minipage}
+}
+
+
+\newenvironment{purpboard}[5]
+{
+  \begin{minipage}{ #1 }
+    \includegraphics[width = #2 , height = #3 ]{purp}
+  \end{minipage}
+  \begin{minipage}{ #4 }
+    \vspace{ #5 }
+}
+{
+  \end{minipage}
+}
+
+
+\newenvironment{redboard}[5]
+{
+  \begin{minipage}{ #1 }
+    \includegraphics[width = #2 , height = #3 ]{redb2}
+  \end{minipage}
+  \begin{minipage}{ #4 }
+    \vspace{ #5 }
+}
+{
+  \end{minipage}
+}
+
+
+\newenvironment{testboard}[7]
+{
+  \begin{minipage}{ #1 }
+    \begin{pspicture}(0,0)( #3 , #4 )
+      \definecolor{color125e}{rgb}{0.5411764705882353,0.5411764705882353,0.5411764705882353}
+      \definecolor{color125}{rgb}{0.30980392156862746,0.27450980392156865,0.788235294117647}
+      \psframe[
+	linewidth= #2 ,
+	linecolor= #7 ,
+	dimen=outer,
+	shadow=true,
+	shadowcolor=color125e,
+	fillstyle=solid]( #3 , #4 )(0.0,0.0)
+    \end{pspicture}
+  \end{minipage}
+  \begin{minipage}{ #5 }
+    \vspace{ #6 }
+}
+{
+  \end{minipage}
+}
+
+\newenvironment{greenboard}[5]
+{
+  \begin{minipage}{ #1 }
+    \includegraphics[width = #2 , height = #3 ]{green}
+  \end{minipage}
+  \begin{minipage}{ #4 }
+    \vspace{ #5 }
+}
+{
+  \end{minipage}
+}
+
+
+\newcommand{\tmmathbf}[1]{\ensuremath{\boldsymbol{#1}}}
+
+
+% math stuf
+\newcommand{\assign}{:=}
+\newcommand{\ordem}[1]{\mid #1 \mid}
+\newcommand{\argu}[1]{\left( #1 \right)}
+\newcommand{\id}{\mathbbm{1}}
+\newcommand{\bigO}[1]{\mathcal{O}\argu{#1}}
+
+% linear algebra
+\newcommand{\vet}[1]{\ensuremath{\boldsymbol{#1}}}
+\newcommand{\pinterno}[2]{\left( #1 , #2 \right)}
+\newcommand{\tmstrong}[1]{\textbf{#1}}
+\newcommand{\tmtextbf}[1]{{\bfseries{#1}}}
+
+% quantum mechanics stuff
+\newcommand{\dket}[1]{\left| #1 \right)}
+\newcommand{\dbra}[1]{\left( #1 \right|}
+\newcommand{\dsubmin}[1]{\left( #1 \right)}
+\newcommand{\dbraket}[2]{\left( #1 | #2 \right)}
+\newcommand{\dbraketm}[3]{\left( #1 \left| #2 \right| #3 \right)}
+\newcommand{\ket}[1]{\left| #1 \right\rangle}
+\newcommand{\bra}[1]{\left\langle #1 \right|}
+\newcommand{\submin}[1]{\left\langle #1 \right\rangle}
+\newcommand{\braket}[2]{\left\langle #1 \right. \left| #2 \right\rangle}
+\newcommand{\braketm}[3]{\langle #1 \mid #2 \mid #3 \rangle}
+\newcommand{\comut}[2]{\left[ #1 , #2 \right]} % THE COMUTATOR
+\newcommand{\op}[1]{\mathbb #1 }
+\newcommand{\tmop}[1]{\ensuremath{\operatorname{#1}}}
+
+% solid state stuff
+\newcommand{\seitz}[2]{\left\{ \, #1 \mid  #2 \, \right\}}
+\newcommand{\kp}{\mathbf{k}\cdot\mathbf{p}}
+\newcommand{\kpar}{k_{\shortparallel}}
+\newcommand{\vkpar}{\vet{k}_{\shortparallel}}
