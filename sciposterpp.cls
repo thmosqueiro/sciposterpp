@@ -235,12 +235,7 @@
     }
   }
 
-\RequirePackage{graphics}
-\RequirePackage{color}
-\RequirePackage{shadow}
-\RequirePackage{a0size}
-\RequirePackage{times}
-\RequirePackage{boxedminipage}
+
 
 \newlength{\titlewidth}
 \newlength{\logowidth}
@@ -506,9 +501,8 @@
 \setlength{\secskip}{\bigskipamount}
 \setlength{\figtopskip}{\secskip}
 \setlength{\figbotskip}{\secskip}
-
 %%%% Defines default institute
-\newcommand{\theinstitute}{\large{Institute}}
+\newcommand{\theinstitute}{\large{Institute of Physics of S\~ao Carlos, University of S\~ao Paulo -- 13560-970 S\~ao Carlos, SP, Brazil}}
 
 \newcommand{\printemail}{}
 %
@@ -888,6 +882,7 @@
 }
 %
 \newcommand{\grupo}[1]{%
+\renewcommand{\theinstitute}{#1 \\ Instituto de F\'isica de S\~ao Carlos \\ Universidade de S\~ao Paulo -- Brasil}
 }
 % \newcommand{\institute}[1]{%
 % \renewcommand{\theinstitute}{#1}
