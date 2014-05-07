@@ -78,6 +78,9 @@
 
 % Providing a command for the institution
 \renewcommand{\theinstitute}{\color{InstituteCol} \large{Institute}}
+\newcommand{\institution}[1]{
+  \renewcommand{\theinstitute}{ #1 }
+}
 
 
 
