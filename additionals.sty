@@ -5,6 +5,18 @@
 
 \ProvidesPackage{additionals}
 
+%% Important packages
+
+% For using a full scheme
+\usepackage[usenames,dvipsnames]{pstricks} % This must be before tikz!
+
+% Defining and configuring tikz package.
+\usepackage{tikz}
+\usepackage{pgf}
+\usetikzlibrary{arrows,shapes,automata,snakes,backgrounds,trees}
+\tikzstyle{every picture}+=[remember picture]
+
+
 
 % Additional very useful macros
 
@@ -119,3 +131,6 @@
 \newcommand{\pinterno}[2]{\left( #1 , #2 \right)}
 \newcommand{\tmstrong}[1]{\textbf{#1}}
 \newcommand{\tmtextbf}[1]{{\bfseries{#1}}}
+
+
+\renewcommand*\familydefault{\sfdefault}
