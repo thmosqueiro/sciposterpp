@@ -1,0 +1,162 @@
+\ProvidesPackage{sciposterpp}
+
+% There is a little brotther package that should be together!
+\RequirePackage{additionals}
+
+
+
+\RequirePackage{ifthen}
+\RequirePackage{lettrine}
+
+
+\RequirePackage{graphics}
+\RequirePackage{color}
+\RequirePackage{shadow}
+\RequirePackage{a0size}
+\RequirePackage{times}
+\RequirePackage{boxedminipage}
+
+
+
+
+
+% Page setting
+\renewcommand{\setpspagesize}
+{
+  \ifthenelse{\equal{\orientation}{portrait}}
+  {
+    \special{papersize=83.96cm,118.82cm}
+  }
+  {
+    \special{papersize=110.00cm,80.00cm}
+  }
+}
+
+
+
+
+% Setting up a 
+\renewcommand{\tiny}{\fontsize{14.4}{18}\selectfont}   
+\renewcommand{\scriptsize}{\fontsize{17.28}{22}\selectfont}
+\renewcommand{\footnotesize}{\fontsize{20.74}{25}\selectfont}
+\renewcommand{\small}{\fontsize{24.88}{30}\selectfont}
+\renewcommand{\normalsize}{\fontsize{29.86}{37}\selectfont}
+\renewcommand{\large}{\fontsize{35.83}{45}\selectfont}
+\renewcommand{\Large}{\fontsize{43}{54}\selectfont}
+\renewcommand{\LARGE}{\fontsize{51.6}{64}\selectfont}
+\renewcommand{\huge}{\fontsize{61.92}{77}\selectfont}
+\renewcommand{\Huge}{\fontsize{74.3}{93}\selectfont}
+\renewcommand{\veryHuge}{\fontsize{89.16}{112}\selectfont}
+\renewcommand{\VeryHuge}{\fontsize{107}{134}\selectfont}
+\renewcommand{\VERYHuge}{\fontsize{107}{134}\selectfont}
+
+\renewcommand{\titlesize}{\Huge}
+\renewcommand{\authorsize}{\Large}
+\renewcommand{\instsize}{\normalsize}
+
+\setlength\smallskipamount{8pt plus 2pt minus 2pt}
+\setlength\medskipamount{14pt plus 5pt minus 5pt}
+\setlength\bigskipamount{29pt plus 9pt minus 9pt}
+
+\setlength\abovecaptionskip{25pt}
+\setlength\belowcaptionskip{0pt}
+\setlength\abovedisplayskip{25pt plus 6pt minus 15 pt}
+\setlength\abovedisplayshortskip{0pt plus 6pt}
+\setlength\belowdisplayshortskip{13pt plus 7pt minus 6pt}
+
+
+
+
+% Defining colors that will affect the poster
+\definecolor{mainCol}{rgb}{1,1,1}
+\definecolor{BoxCol}{rgb}{0,0,0}
+\definecolor{TextCol}{rgb}{0,0,0}
+\definecolor{SectionCol}{rgb}{0,0,0}
+\definecolor{TitleCol}{rgb}{0.2,0,0.6}
+\definecolor{TextColor}{rgb}{0,0,0}
+\definecolor{AuthorCol}{rgb}{0,0,0}
+\definecolor{InstituteCol}{rgb}{0.2,0,0.6}
+\definecolor{ConferenceCol}{rgb}{0,0,0.9}
+
+
+
+% Providing a command for the institution
+\renewcommand{\theinstitute}{\color{InstituteCol} \large{Institute}}
+
+
+
+
+% Setting up the logos
+\newcommand{\leftlogopath}{logos.png}
+\newcommand{\rightlogopath}{logos.png}
+
+\renewcommand{\printleftlogo}{%
+  \begin{center}
+     \resizebox{1.6\textwidth}{!}{\vspace{-0.6cm}\includegraphics[scale
+         = 0.5]{\leftlogopath}}
+  \end{center}
+}
+\renewcommand{\printrightlogo}{%
+     \begin{flushright}
+       \resizebox{1.8\textwidth}{!}{\includegraphics{\rightlogopath}}
+     \end{flushright}
+}
+
+
+
+
+% Creating the title
+
+%\newlength{\titlewidth}  % does this one already exist?
+\newlength{\llogowidth}
+\newlength{\rlogowidth}
+
+\setlength{\llogowidth}{0.09\textheight}
+\setlength{\rlogowidth}{0.1\textheight}
+\setlength{\titlewidth}{0.7\textwidth} %\textwidth
+
+
+\renewcommand{\maketitle}{%
+  \ifthenelse{\boolean{useleftlogo}}{%
+  \begin{minipage}[c]{\llogowidth}
+     \printleftlogo
+  \end{minipage}
+  }{}
+  \hspace{3cm}
+  \begin{minipage}[c]{\titlewidth}
+    \begin{center}
+      \renewcommand{\baselinestretch}{3.3}\normalsize
+      {\titlesize \bf \color{TitleCol} \@title}\par
+      \renewcommand{\baselinestretch}{1.0}\normalsize            
+      \vspace{0.4\titleskip}
+      {\authorsize {\bf \color{AuthorCol} \@author} \par}
+      {\instsize
+       \vspace{0.2\titleskip}
+       \color{InstituteCol} \Large  \theinstitute \par
+       \ifthenelse{\equal{\printemail}{}}{
+         }{%
+         \vspace{0.2\titleskip}
+         \texttt{\printemail}
+         }
+      }
+    \end{center}
+  \end{minipage}%}}
+  \ifthenelse{\boolean{userightlogo}}{%
+  \begin{minipage}[c]{\rlogowidth}
+     \printrightlogo
+  \end{minipage}
+  }{}
+\vspace{\titleskip}
+}
+
+
+
+
+
+% Conference at the bottom of the poster
+\renewcommand{\conference}[1]{
+\makeatletter
+\renewcommand{\@conference}{\small \color{ConferenceCol} #1 }
+\setfooter
+}
+

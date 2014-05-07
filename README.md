@@ -21,6 +21,11 @@ My idea: turn it into a single package (.sty) which works with the
 last version of scipoter. As you can see, currently I have modified
 the an old version of sciposter and this is not good at all.
 
+*Tests:* my development is highly based on the texlive-sciposter
+package available at the main Fedora repository, marked as version
+svn15878.1.18.
+
+
 
 Licensing
 -----
