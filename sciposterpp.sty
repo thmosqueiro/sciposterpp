@@ -1,9 +1,5 @@
 \ProvidesPackage{sciposterpp}
 
-% There is a little brotther package that should be together!
-\RequirePackage{additionals}
-
-
 
 \RequirePackage{ifthen}
 \RequirePackage{lettrine}
@@ -167,3 +163,10 @@
 \setlength\parstartskip{2\baselineskip}
 \setboolean{useleftlogo}{true}
 \setboolean{userightlogo}{true}
+
+
+
+
+% There is a little brotther package that should be together!
+% This has to be done after sciposterpp has been read.
+\RequirePackage{additionals}
