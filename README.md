@@ -14,12 +14,13 @@ me a link.
 Idea and current status
 -----
 
-This package is not yet ready for use, as is. Some friends have tested
-it, but they have a complete set of scripts.
+This package is somewhat read for use as is. Some friends have tested
+an earlier version, and everything was okay.
 
-My idea: turn it into a single package (.sty) which works with the
-last version of scipoter. As you can see, currently I have modified
-the an old version of sciposter and this is not good at all.
+My idea: sciposterpp started as a forked class from
+sciposter. Currentlu, it's designed as a package that you add to you
+tex whenever you are using sciposter class. This way, everytime
+sciposter gets an update, you won't be missing it.
 
 *Tests:* my development is highly based on the texlive-sciposter
 package available at the main Fedora repository, marked as version
