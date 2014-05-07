@@ -7,15 +7,16 @@ experience with sciposter, and a few icons that are used by those two
 packages as custom buttons.
 
 Feel free to contribute to this repository. If you have used it in
-your poster and you want to share with us the ens result, please send
+your poster and you want to share with us the final result, please send
 me a link.
 
 
 Idea and current status
 -----
 
-This package is somewhat read for use as is. Some friends have tested
-an earlier version, and everything was okay.
+This package is "somewhat" ready for use as is. I still have some ground 
+I want to cover before actually saying it's completely ready. Some friends 
+have tested an earlier version, and everything was okay.
 
 My idea: sciposterpp started as a forked class from
 sciposter. Currentlu, it's designed as a package that you add to you
