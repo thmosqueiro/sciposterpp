@@ -90,16 +90,11 @@
 \newcommand{\leftlogopath}{logos.png}
 \newcommand{\rightlogopath}{logos.png}
 
-\renewcommand{\printleftlogo}{%
-  \begin{center}
-     \resizebox{1.6\textwidth}{!}{\vspace{-0.6cm}\includegraphics[scale
-         = 0.5]{\leftlogopath}}
-  \end{center}
+\renewcommand{\printleftlogo}{
+  \resizebox{0.9\textwidth}{!}{\includegraphics[scale = 0.5]{\leftlogopath}}
 }
 \renewcommand{\printrightlogo}{%
-     \begin{flushright}
-       \resizebox{1.8\textwidth}{!}{\includegraphics{\rightlogopath}}
-     \end{flushright}
+  \resizebox{0.9\textwidth}{!}{\includegraphics{\rightlogopath}}
 }
 
 
@@ -111,21 +106,23 @@
 \newlength{\llogowidth}
 \newlength{\rlogowidth}
 
-\setlength{\llogowidth}{0.09\textheight}
-\setlength{\rlogowidth}{0.1\textheight}
+\setlength{\llogowidth}{0.145\textheight}
+\setlength{\rlogowidth}{0.145\textheight}
 \setlength{\titlewidth}{0.7\textwidth} %\textwidth
 
 
-\renewcommand{\maketitle}{%
-  \ifthenelse{\boolean{useleftlogo}}{%
-  \begin{minipage}[c]{\llogowidth}
-     \printleftlogo
-  \end{minipage}
+\renewcommand{\maketitle}{
+  \hspace{-5cm}
+  \ifthenelse{\boolean{useleftlogo}}{
+    \begin{minipage}{\llogowidth}
+      \printleftlogo
+    \end{minipage}
   }{}
-  \hspace{3cm}
-  \begin{minipage}[c]{\titlewidth}
+  %\hspace{2cm}
+  \begin{minipage}{\titlewidth}
     \begin{center}
-      \renewcommand{\baselinestretch}{3.3}\normalsize
+      \renewcommand{\baselinestretch}{3.3}
+      \normalsize
       {\titlesize \bf \color{TitleCol} \@title}\par
       \renewcommand{\baselinestretch}{1.0}\normalsize            
       \vspace{0.4\titleskip}
@@ -140,13 +137,14 @@
          }
       }
     \end{center}
-  \end{minipage}%}}
-  \ifthenelse{\boolean{userightlogo}}{%
-  \begin{minipage}[c]{\rlogowidth}
+  \end{minipage}
+  \ifthenelse{\boolean{userightlogo}}{
+  \begin{minipage}{\rlogowidth}
      \printrightlogo
   \end{minipage}
   }{}
-\vspace{\titleskip}
+  
+  \vspace{\titleskip}
 }
 
 
@@ -160,3 +158,12 @@
 \setfooter
 }
 
+
+
+
+
+\setlength\belowdisplayskip\abovedisplayskip
+\normalsize
+\setlength\parstartskip{2\baselineskip}
+\setboolean{useleftlogo}{true}
+\setboolean{userightlogo}{true}
