@@ -2,8 +2,8 @@ sciposterpp
 ===========
 
 Additional macros for sciposter I use all the time. Here you'll find
-sciposterpp package, an additional packages, which may enhance your
-experience with sciposter, and a few images that are used by those two
+sciposterpp package, an additional package, which may enhance your
+experience with sciposter, and a few icons that are used by those two
 packages as custom buttons.
 
 Feel free to contribute to this repository. If you have used it in
