@@ -10,6 +10,11 @@ Feel free to contribute to this repository. If you have used it in
 your poster and you want to share with us the final result, please send
 me a link.
 
+I have been using this sample poster to develope the package:
+https://github.com/thmosqueiro/sciposterpp/blob/master/example/poster.pdf?raw=true
+
+Soon enough I should include more real life examples.
+
 
 Idea and current status
 -----
