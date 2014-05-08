@@ -1,0 +1,118 @@
+\section{Predicting Synchronization with Kuramoto Oscillators}
+
+\begin{minipage}{0.23\textwidth}
+  {\includegraphics[scale=1.3]{images/groups.pdf}}
+\end{minipage}
+\begin{minipage}{0.25\textwidth}
+  
+  \begin{center}
+    \tikz { \node [rectangle, thick, draw=Green, font=\itshape]
+  {\citacao{\footnotesize Amig\'o, Mosqueiro and Huerta '2014, {\bf
+        Submitted} } }; }
+  \end{center}
+  
+  \usualsep\usualsep
+  \inputups {\color{blue} Inspired by the {\bf striatum} architecture}
+  
+  \usualsep  
+  \inputups {$N$ oscillators per group}
+  
+  \usualsep
+  \begin{flushright}
+    \inputcerto {\color{Red} 
+      $j$-th kuramoto oscillators i group $n$: 
+      
+      \begin{center}
+        $ \dot{\phi}_j^n (t) = \omega - \epsilon F^{n-1}(t) $
+      \end{center}
+    }
+    
+    \color{Orange}
+    $ F^{n}(t) = \frac{1}{N} \sum\limits_{j=1}^N \chi_{[2\pi-\Delta,2\pi)}\left[ \phi^n_j(t) \right] $
+  \end{flushright}
+  
+\end{minipage}
+
+\usualsep\usualsep
+\begin{minipage}{0.253\textwidth}
+  
+  \begin{center}
+    
+    \inputcerto We have found a synchronization threshold:
+    
+    \usualsep
+    \tikz{
+      \tikzstyle{quadro} = [rectangle, rounded corners = 10mm, minimum
+        size=5cm, line width = 2mm, draw=blue, top color = white,
+        bottom color=Blue!20]
+      \node [quadro] (mean) at (-8,-6.5) { \ \ \ \  $ \epsilon_{th} \, = \,
+        \dfrac{2\pi \omega}{\Delta} $  \ \ \ \ };
+    }
+  \end{center}
+  
+  \begin{center}
+    \includegraphics[scale = 2.0]{images/PhaseTransition.pdf}
+  \end{center}
+\end{minipage}
+\begin{minipage}{0.22\textwidth}
+  \begin{flushright}
+    \includegraphics[scale = 2.5]{images/Phases_vs_Time_k10.pdf}
+  \end{flushright}
+  
+  \inputups Example of phases over time per group precisely at the boundary
+\end{minipage}
+
+
+\section{Extending results to realistic models: \\ a Learning Approach}
+
+\inputarrow Using the same circuit, we want to undestand the
+synchronization of LN neurons
+
+\usualsep
+\begin{minipage}{0.2\textwidth}
+  
+  \inputcirc {\color{blue} 16 differential equations}
+  
+  \inputcirc 2 comportaments ({\bf \color{Green} soma + axon})
+  
+  \usualsep
+  \inputcirc Integration with CVODE
+  
+\end{minipage}
+\begin{minipage}{0.25\textwidth}
+  
+  \begin{center}
+    
+    \inputcirc With {\color{red} $20$ neurosn per group}, simulatiosn
+    takes at least {\color{Orange} $3$ hours}
+    
+    \usualsep
+    \inputcirc In contrast to Kuramoto model:
+    
+    {\color{blue} some minuts...}
+    
+  \end{center}
+\end{minipage}
+
+\usualsep\usualsep
+\begin{minipage}{0.2\textwidth}
+  
+  \inputcirc {\color{blue} The idea: let the Kuramoto oscillators
+    learn the PRC of LN neurons}
+   
+\end{minipage}
+\begin{minipage}{0.25\textwidth}
+  
+  \begin{center}
+    
+    {\color{blue} $\dot{\phi}_j^n(t) = \omega - {\color{magenta}
+        \epsilon \left[ \phi(t) \right]} F^{n-1}(t)$}
+    
+    \usualsep
+    \inputarrow {\color{magenta} $\epsilon \left[ \phi(t) \right]$} is the desired PRC
+    
+  \end{center}
+\end{minipage}
+
+\usualsep\usualsep\usualsep\usualsep\usualsep\usualsep\usualsep\usualsep\usualsep
+here...

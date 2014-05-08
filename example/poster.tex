@@ -1,0 +1,101 @@
+\documentclass[a0, 30pt]{sciposter}
+\usepackage{graphicx}
+\usepackage{amsmath, amssymb, amsfonts, bbm, bm}
+\usepackage{multicol}
+\usepackage[american]{babel}
+\usepackage[ansinew]{inputenc}
+\usepackage{sciposterpp}
+\usepackage{setspace}
+\usepackage{wasysym}
+
+\usepackage[T1]{fontenc}
+
+\setpspagesize
+
+\title{This is the Title of my Poster \\ And it has 2 lines!}
+\author{\underline{Author1}$^1$, Author2$^2$ and Author3$^1$}
+\email{user@server.end}
+\institution{$^1$First Institution \\ $^2$Second Institution}
+
+\begin{document}
+
+
+\conference{This poster was made with Fedora 20
+    Linux, \LaTeX, sciposter++, Emacs, GnuPlot and CVODE. \hfill {\bf
+      May 17, 2014}}
+
+\maketitle
+
+
+\begin{multicols}{2}
+  
+  \section{This is my section}
+  
+  \usualsep
+  \begin{center}
+    \bf \color{blue} Don't pay attention to the meaning to the text, \\ they are
+    only meant to illustrate the bullets!
+  \end{center}
+  
+  \usualsep
+  \inputbullet Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  
+  \usualsep 
+  \inputups Donec a diam lectus. Sed sit amet ipsum
+  
+  \usualsep
+  \inputcirc Maecenas congue ligula ac quam viverra nec consectetur ante
+  hendrerit 
+  
+  \usualsep
+  \inputno Donec et mollis dolor
+  
+  \usualsep
+  \inputcharada Maecenas congue ligula ac quam viverra nec consectetur ante
+  hendrerit
+  
+  \usualsep
+  \inputsmile Maecenas congue ligula ac quam viverra nec consectetur ante
+  hendrerit
+  
+  \usualsep
+  \inputcerto Donec et mollis dolor
+  
+  \section{Results}
+  
+  \begin{center}
+    \includegraphics[scale = 1.0]{example.png}
+  \end{center}
+  
+  
+  \usualsep\usualsep\usualsep
+  \begin{center}
+    \citepp{Mosqueiro \& Maia '2012, PRE}
+  \end{center}
+  
+  
+  \section{Conclusions}
+  
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a
+  diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac
+  quam viverra nec consectetur ante hendrerit. Donec et mollis
+  dolor. Praesent et diam eget libero egestas mattis sit amet vitae
+  augue. Nam tincidunt congue enim, ut porta lorem lacinia
+  consectetur. Donec ut libero sed arcu vehicula ultricies a non
+  tortor. Lorem ipsum dolor sit amet, consectetur adipiscing
+  elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper
+  sed, adipiscing id dolor. Pellentesque auctor nisi id magna
+  consequat sagittis. Curabitur dapibus enim sit amet elit pharetra
+  tincidunt feugiat nisl imperdiet. Ut convallis libero in urna
+  ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam
+  pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et
+  magnis dis parturient montes, nascetur ridiculus mus. In rutrum
+  accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in
+  est.
+  
+  
+  
+\end{multicols}
+
+
+\end{document}
