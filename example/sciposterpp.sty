@@ -86,9 +86,15 @@
 
 
 % Setting up the logos
-\newcommand{\leftlogopath}{logos.png}
-\newcommand{\rightlogopath}{logos.png}
+\newcommand{\leftlogopath}{}
+\newcommand{\rightlogopath}{}
 
+% For the user to set the actual logos
+\newcommand{\SetRightLogo}[1]{\renewcommand{\rightlogopath}{#1}}
+\newcommand{\SetLeftLogo}[1]{\renewcommand{\leftlogopath}{#1}}
+
+
+% The following commands will be used internally to print the logo
 \renewcommand{\printleftlogo}{
   \resizebox{0.9\textwidth}{!}{\includegraphics[scale = 0.5]{\leftlogopath}}
 }
