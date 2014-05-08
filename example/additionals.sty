@@ -98,6 +98,23 @@
 
 
 
+% Good looking block
+\newcommand{\ShowyTopColor}{white}
+\newcommand{\ShowyBottomColor}{Blue!20}
+\newcommand{\ShowyMinWidth}{10cm}
+\newcommand{\ShowyMinSize}{4cm}
+\newcommand{\ShowyFontSize}{\Large}
+\newcommand{\showyblock}[1]{
+  \tikz{
+    \tikzstyle{quadro} = [rectangle, rounded corners = 10mm, minimum
+      size = \ShowyMinSize, line width = 2mm, draw=blue, top color =
+      \ShowyTopColor, bottom color=\ShowyBottomColor, minimum width =
+      \ShowyMinWidth]
+    \node [quadro] (mean) at (-8,-6.5) { \ShowyFontSize\ \ #1 \ \ };
+  }
+}
+
+
 
 
 % math stuf
