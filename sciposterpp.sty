@@ -1,6 +1,5 @@
 \ProvidesPackage{sciposterpp}
 
-
 \RequirePackage{ifthen}
 \RequirePackage{lettrine}
 
@@ -12,6 +11,37 @@
 \RequirePackage{times}
 \RequirePackage{boxedminipage}
 
+
+% Processing the options
+
+
+% Fonts
+\DeclareOption{sans}{
+  \renewcommand{\familydefault}{\sfdefault}
+}
+\DeclareOption{roman}{
+  \renewcommand{\familydefault}{\rmdefault}
+}
+\ExecuteOptions{sans}
+
+
+
+% Themes
+\DeclareOption{dagobah}{
+  \input{dagobah_theme.def}
+}
+\DeclareOption{Korriban}{
+  \input{korriban_theme.def}
+}
+\DeclareOption{Mandalore}{
+  \input{mandalore_theme.def}
+}
+
+\ExecuteOptions{Dagobah}
+
+
+
+\ProcessOptions\relax
 
 
 
@@ -61,18 +91,6 @@
 \setlength\belowdisplayshortskip{13pt plus 7pt minus 6pt}
 
 
-
-
-% Defining colors that will affect the poster
-\definecolor{mainCol}{rgb}{1,1,1}
-\definecolor{BoxCol}{rgb}{0,0,0}
-\definecolor{TextCol}{rgb}{0,0,0}
-\definecolor{SectionCol}{rgb}{0,0,0}
-\definecolor{TitleCol}{rgb}{0.2,0,0.6}
-\definecolor{TextColor}{rgb}{0,0,0}
-\definecolor{AuthorCol}{rgb}{0,0,0}
-\definecolor{InstituteCol}{rgb}{0.2,0,0.6}
-\definecolor{ConferenceCol}{rgb}{0,0,0.9}
 
 
 
@@ -172,7 +190,6 @@
 \setlength\parstartskip{2\baselineskip}
 \setboolean{useleftlogo}{true}
 \setboolean{userightlogo}{true}
-
 
 
 

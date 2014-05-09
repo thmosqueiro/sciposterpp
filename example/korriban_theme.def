@@ -1,0 +1,9 @@
+\definecolor{mainCol}{rgb}{1,1,1}
+\definecolor{BoxCol}{rgb}{0.9,0.4,0.4}
+\definecolor{TextCol}{rgb}{0,0,0}
+\definecolor{SectionCol}{rgb}{0.1,0,0}
+\definecolor{TitleCol}{rgb}{0.85,0.2,0.2}
+\definecolor{TextColor}{rgb}{0.1,0,0}
+\definecolor{AuthorCol}{rgb}{0.3,0.1,0.2}
+\definecolor{InstituteCol}{rgb}{0.6,0.2,0}
+\definecolor{ConferenceCol}{rgb}{0,0.7,0}
