@@ -1,14 +1,14 @@
 sciposterpp
 ===========
 
-Additional macros for sciposter I use all the time. Here you'll find
-sciposterpp package, an additional package, which may enhance your
-experience with sciposter, and a few icons that are used by those two
-packages as custom buttons.
+This is a package that adds additional macros for sciposter. Here you'll find
+sciposterpp package, a few icons and additional tikz blocks. Also, sciposterpp
+accepts easibly customizable color themes. Currently, you can already pick three 
+color themes out of the box (Dagobah, Korriban and Mandalore).
 
-Feel free to contribute to this repository. If you have used it in
-your poster and you want to share with us the final result, please send
-me a link.
+Feel free to contribute to this repository. I'd be especially gratefull for better 
+theme colors, it's easy to write one. If you have used it in your poster and you 
+want to share with us the final result, please send me a link.
 
 I have been using this sample poster to develope the package:
 https://github.com/thmosqueiro/sciposterpp/blob/master/example/poster.pdf?raw=true
@@ -24,7 +24,7 @@ I want to cover before actually saying it's completely ready. Some friends
 have tested an earlier version, and everything was okay.
 
 My idea: sciposterpp started as a forked class from
-sciposter. Currentlu, it's designed as a package that you add to you
+sciposter. Currently, it's designed as a package that you add to you
 tex whenever you are using sciposter class. This way, everytime
 sciposter gets an update, you won't be missing it.
 
