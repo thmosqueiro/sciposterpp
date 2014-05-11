@@ -32,11 +32,12 @@ Idea and current status
 This package is working, you can definitely try it. Next I'll list what's in my mind
 as the next tasks. Most of it should be done in the next _days_.
 
-1. Organize better what should be in _additionals.sty_ and what should be in _sciposterpp.sty_
-2. Write down my blocks (I just have to copy from an old file and paste in an organized way).
-3. Complete the themes
-4. Make possible to import a user defined theme
-5. Turn all png icons into tikz figures
+1. Organize everything according to **TDS**.
+2. Organize better what should be in _additionals.sty_ and what should be in _sciposterpp.sty_.
+3. Write down my blocks (I just have to copy from an old file and paste in an organized way).
+4. Complete the themes
+5. Make possible to import a user defined theme
+6. Turn all png icons into tikz figures
 
 
 **Tests:** my development is highly based on the texlive-sciposter
